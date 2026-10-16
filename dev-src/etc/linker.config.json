@@ -1,0 +1,13 @@
+{
+	"provideLibs": [	
+		    "libdummy_binary_libldacBT-abr.a-x86_64-v2.so",
+		    "libdummy_binary_libldacBT-abr.a.so",
+		    "libdummy_binary_libldacBT-enc.a-x86_64-v2.so",
+		    "libdummy_binary_libldacBT-enc.a.so",
+		    "libdummy_headers_libldac-x86_64-v2.so",
+		    "libdummy_headers_libldac.so",
+		    "libdummy_libldac_dev-x86_64-v2.so",
+		    "libdummy_libldac_dev.so"
+	],
+	"visible": true
+}

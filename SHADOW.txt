@@ -1,0 +1,6 @@
+shadow prebuilt repo: libldac (target)
+  upstream: external/libldac
+  api-level: 32 (branch 32-20261016)
+  blobs: org.blisslabs.ag.libldac.apex org.blisslabs.ag.libldac.dev.apex org.blisslabs.ag.libldac.doc.apex
+  dev-src: extracted dev payload + libldac headers + root Android.bp
+  date: 2026-10-16

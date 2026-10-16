@@ -1,0 +1,65 @@
+package {
+    default_applicable_licenses: ["external_libldac_license"],
+}
+
+license {
+    name: "external_libldac_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+    ],
+    license_text: [
+        "LICENSE",
+        "NOTICE",
+    ],
+}
+
+prebuilt_apex {
+    name: "org.blisslabs.ag.libldac",
+    apex_name: "org.blisslabs.ag.libldac",
+    source_apex_name: "org.blisslabs.ag.libldac",
+    arch: {
+        x86_64: {
+            src: "org.blisslabs.ag.libldac.apex",
+        },
+    },
+    filename: "org.blisslabs.ag.libldac.apex",
+    prefer: true,
+    installable: true,
+}
+
+cc_prebuilt_library {
+    name: "libldacBT_enc",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+    export_include_dirs: [
+        "dev-src/include",
+        "dev-src/include/inc",
+    ],
+    shared: {
+        srcs: ["src/lib/libldacBT_enc.so"],
+    },
+    static: {
+        srcs: ["dev-src/lib/libldacBT_enc.a"],
+    },
+}
+
+cc_prebuilt_library {
+    name: "libldacBT_abr",
+    vendor_available: true,
+    product_available: true,
+    recovery_available: true,
+    host_supported: true,
+    export_include_dirs: [
+        "dev-src/include",
+        "dev-src/include/abr/inc",
+    ],
+    shared: {
+        srcs: ["src/lib/libldacBT_abr.so"],
+    },
+    static: {
+        srcs: ["dev-src/lib/libldacBT_abr.a"],
+    },
+}
