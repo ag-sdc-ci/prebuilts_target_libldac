@@ -35,14 +35,14 @@ cc_prebuilt_library {
     recovery_available: true,
     host_supported: true,
     export_include_dirs: [
-        "dev-src/include",
-        "dev-src/include/inc",
+        "include",
+        "include/inc",
     ],
     shared: {
-        srcs: ["src/lib/libldacBT_enc.so"],
+        srcs: ["lib64/libldacBT_enc.so"],
     },
     static: {
-        srcs: ["dev-src/lib/libldacBT_enc.a"],
+        srcs: ["lib64/libldacBT_enc.a"],
     },
 }
 
@@ -53,13 +53,13 @@ cc_prebuilt_library {
     recovery_available: true,
     host_supported: true,
     export_include_dirs: [
-        "dev-src/include",
-        "dev-src/include/abr/inc",
+        "include",
+        "include/abr/inc",
     ],
     shared: {
-        srcs: ["src/lib/libldacBT_abr.so"],
+        srcs: ["lib64/libldacBT_abr.so"],
     },
     static: {
-        srcs: ["dev-src/lib/libldacBT_abr.a"],
+        srcs: ["lib64/libldacBT_abr.a"],
     },
 }
